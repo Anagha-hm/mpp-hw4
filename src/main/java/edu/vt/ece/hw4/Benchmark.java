@@ -10,11 +10,14 @@ import edu.vt.ece.hw4.locks.ALock;
 import edu.vt.ece.hw4.locks.BackoffLock;
 import edu.vt.ece.hw4.locks.Lock;
 import edu.vt.ece.hw4.locks.MCSLock;
+import edu.vt.ece.hw4.locks.PriorityQueueLock;
 // import edu.vt.ece.hw4.locks.PriorityQueueLock;
 import edu.vt.ece.hw4.locks.SimpleHLock;
 import edu.vt.ece.hw4.locks.SpinSleepLock;
 import edu.vt.ece.hw4.locks.TTASLock;
-import edu.vt.ece.hw4.utils.ClusterThread;
+import edu.vt.ece.hw4.utils.ThreadCluster;
+import edu.vt.ece.spin.CLHLock;
+import edu.vt.ece.spin.TASLock;
 
 public class Benchmark {
 
@@ -25,6 +28,8 @@ public class Benchmark {
     private static final String SHLOCK = "SimpleHLock";
     private static final String PRIORITYQUEUE = "PriorityQueueLock";
     private static final String TTAS = "TTASLock";
+    private static final String TAS = "TASLock";
+    private static final String CLHLOCK = "CLHLock";
 
 
     public static void main(String[] args) throws Exception {
@@ -56,6 +61,18 @@ public class Benchmark {
                     break;
                 case TTAS: 
                     lock = new TTASLock();
+                    break;
+                case SHLOCK:
+                    lock = new SimpleHLock(Integer.parseInt(args[4]));
+                    break;
+                case PRIORITYQUEUE:
+                    lock = new PriorityQueueLock(1000);
+                    break;
+                case TAS:
+                    lock = new TASLock();
+                    break;
+                case CLHLOCK:
+                    lock = new CLHLock();
                     break;
             }
 

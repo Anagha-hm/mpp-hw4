@@ -10,7 +10,7 @@
 
 package edu.vt.ece.spin;
 
-import java.util.concurrent.locks.Lock;
+import edu.vt.ece.hw4.locks.Lock;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;

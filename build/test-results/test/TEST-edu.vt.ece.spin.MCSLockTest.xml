@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.vt.ece.spin.MCSLockTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-02T19:44:51" hostname="HP_PAVILION" time="0.006">
+<testsuite name="edu.vt.ece.spin.MCSLockTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-02T23:47:42" hostname="HP_PAVILION" time="0.007">
   <properties/>
-  <testcase name="testParallel" classname="edu.vt.ece.spin.MCSLockTest" time="0.006"/>
+  <testcase name="testParallel" classname="edu.vt.ece.spin.MCSLockTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
