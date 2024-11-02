@@ -54,14 +54,9 @@ public class Benchmark {
                 case SPINSLEEPLOCK:
                     lock = new SpinSleepLock(Integer.parseInt(args[4]));
                     break;
-                case SHLOCK:
-                    lock = new SimpleHLock(Integer.parseInt(args[4]));
-                    break;
                 case TTAS: 
                     lock = new TTASLock();
                     break;
-                // case PRIORITYQUEUE:
-                //     lock = new PriorityQueueLock();
             }
 
             switch (mode.trim().toLowerCase()) {
@@ -82,7 +77,6 @@ public class Benchmark {
                     // System.out.println("Second Implementation");
                     Barrier b1 = new ArrayBarrier(threadCount); // second implementation
                     runBarrierTest(b1, threadCount, iters);
-                    
                     break;
                 case "cluster":
                     runClusterCS(lock, threadCount, iters, Integer.parseInt(args[4]));
