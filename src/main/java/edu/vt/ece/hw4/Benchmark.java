@@ -71,10 +71,13 @@ public class Benchmark {
                     runLongCS(lock, threadCount, iters);
                     break;
                 case "barrier":
-                    // Barrier b = new ArrayBarrier(threadCount); // second implementation
-                    // runBarrierTest(b, threadCount, iters);
+                    System.out.println("First Implementation");
                     Barrier b = new TTASBarrier(threadCount); // first implementation 
                     runBarrierCS(b, threadCount, iters);
+                    System.out.println("Second Implementation");
+                    Barrier b1 = new ArrayBarrier(threadCount); // second implementation
+                    runBarrierTest(b1, threadCount, iters);
+                    
                     break;
                 case "cluster":
                     runClusterCS(lock, threadCount, iters, Integer.parseInt(args[4]));
