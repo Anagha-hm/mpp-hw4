@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.vt.ece.spin.CompositeFastPathLockTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-02T16:00:15" hostname="HP_PAVILION" time="0.665">
+  <properties/>
+  <testcase name="testParallel" classname="edu.vt.ece.spin.CompositeFastPathLockTest" time="0.665"/>
+  <system-out><![CDATA[Fast path taken: 84/32768
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.vt.ece.spin.BackoffLockTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-02T16:00:15" hostname="HP_PAVILION" time="0.056">
+  <properties/>
+  <testcase name="testParallel" classname="edu.vt.ece.spin.BackoffLockTest" time="0.056"/>
+  <system-out><![CDATA[parallel
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

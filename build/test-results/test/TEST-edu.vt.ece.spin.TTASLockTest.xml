@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.vt.ece.spin.TTASLockTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-02T16:00:16" hostname="HP_PAVILION" time="0.008">
+  <properties/>
+  <testcase name="testParallel" classname="edu.vt.ece.spin.TTASLockTest" time="0.008"/>
+  <system-out><![CDATA[parallel
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
