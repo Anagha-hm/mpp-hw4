@@ -13,6 +13,7 @@ import edu.vt.ece.hw4.locks.MCSLock;
 // import edu.vt.ece.hw4.locks.PriorityQueueLock;
 import edu.vt.ece.hw4.locks.SimpleHLock;
 import edu.vt.ece.hw4.locks.SpinSleepLock;
+import edu.vt.ece.hw4.locks.TTASLock;
 import edu.vt.ece.hw4.utils.ClusterThread;
 
 public class Benchmark {
@@ -23,6 +24,7 @@ public class Benchmark {
     private static final String SPINSLEEPLOCK = "SpinSleepLock";
     private static final String SHLOCK = "SimpleHLock";
     private static final String PRIORITYQUEUE = "PriorityQueueLock";
+    private static final String TTAS = "TTASLock";
 
 
     public static void main(String[] args) throws Exception {
@@ -55,6 +57,9 @@ public class Benchmark {
                 case SHLOCK:
                     lock = new SimpleHLock(Integer.parseInt(args[4]));
                     break;
+                case TTAS: 
+                    lock = new TTASLock();
+                    break;
                 // case PRIORITYQUEUE:
                 //     lock = new PriorityQueueLock();
             }
@@ -71,10 +76,10 @@ public class Benchmark {
                     runLongCS(lock, threadCount, iters);
                     break;
                 case "barrier":
-                    System.out.println("First Implementation");
-                    Barrier b = new TTASBarrier(threadCount); // first implementation 
-                    runBarrierCS(b, threadCount, iters);
-                    System.out.println("Second Implementation");
+                    // System.out.println("First Implementation");
+                    // Barrier b = new TTASBarrier(threadCount); // first implementation 
+                    // runBarrierCS(b, threadCount, iters);
+                    // System.out.println("Second Implementation");
                     Barrier b1 = new ArrayBarrier(threadCount); // second implementation
                     runBarrierTest(b1, threadCount, iters);
                     
